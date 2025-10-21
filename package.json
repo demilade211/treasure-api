@@ -29,6 +29,7 @@
     "mixpanel": "^0.18.1",
     "mongoose": "^8.19.2",
     "otp-generators": "^1.0.3",
+    "uuid": "^13.0.0",
     "validator": "^13.15.15"
   },
   "devDependencies": {

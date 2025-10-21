@@ -1,6 +1,4 @@
-
 import UserModel from "../models/user"
-import ProfileModel from "../models/profile.js"
 import otpModel from "../models/otps"
 import ErrorHandler from "../utils/errorHandler.js";
 import jwt from 'jsonwebtoken';
@@ -8,16 +6,33 @@ import bcrypt from "bcryptjs";
 import crypto from "crypto"
 import sendEmail from "../utils/sendEmail"
 import newOTP from 'otp-generators';
-import { handleEmail } from "../utils/helpers"; 
+import { v4 as uuidv4 } from "uuid";
+import { handleEmail } from "../utils/helpers";
 
 const regexUserName = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
 
 
+export const checkPhone = async (req, res, next) => {
+    const { phoneNumber } = req.params
+    try {
+
+        const user = await UserModel.findOne({ phoneNumber: phoneNumber })
+
+        if (!user) return next(new ErrorHandler("This phone number is not registered", 200))
+
+        return res.status(200).json({
+            success: true,
+            message: "Available",
+            userId: user._id
+        })
+    } catch (error) {
+        return next(error)
+    }
+}
 
 export const sendOtpToEmail = async (req, res, next) => {
 
     const { email } = req.body;
-
     // Generate token
     const otp = newOTP.generate(5, { alphabets: false, upperCase: false, specialChar: false });
 
@@ -44,7 +59,7 @@ export const sendOtpToEmail = async (req, res, next) => {
 
             await user.save({ validateBeforeSave: false });
 
-            return await handleEmail(user, next, message, res)
+            await handleEmail(user,next,message)
 
         }
 
@@ -56,8 +71,7 @@ export const sendOtpToEmail = async (req, res, next) => {
         });
 
 
-        return await handleEmail(savedUser, next, message, res)
-
+        await handleEmail(savedUser,next,message)
 
 
     } catch (error) {
@@ -93,17 +107,9 @@ export const verifyOtp = async (req, res, next) => {
 export const registerUser = async (req, res, next) => {
 
     try {
-        const { username, email, password, confirmPassword } = req.body
+        const { name, email, password, confirmPassword } = req.body
 
-        if (!username || !email || !password || !confirmPassword) return next(new ErrorHandler("Alls fields required", 400))
-
-        if (username.length < 1) return next(new ErrorHandler("Username cannot be less than one", 200))
-
-        if (!regexUserName.test(username)) return next(new ErrorHandler("Invalid username cannot start with special characters", 200))
-
-        const userNameExists = await UserModel.findOne({ username: username.toLowerCase() })
-
-        if (userNameExists) return next(new ErrorHandler("This username has been taken please choose another", 200))
+        if (!name || !email || !password || !confirmPassword) return next(new ErrorHandler("All fields required", 400))
 
         if (password !== confirmPassword) return next(new ErrorHandler("Passwords do not match", 200))
 
@@ -118,23 +124,11 @@ export const registerUser = async (req, res, next) => {
 
         const savedUser = await UserModel.create({
             email: email.toLowerCase(),
-            username: username.toLowerCase(),
-            ign: username.toLowerCase(),
+            name,
             password,
-            authorizations: [],
+            cartItems:[],
+            wishItems:[],
         });
-
-
-         
-
-        let profileFields = {
-            user: savedUser._id,
-            tournamentsPlayed: [],
-            medals: [],
-            teamUpRequests: []
-        };
-
-        const savedProfile = await ProfileModel.create(profileFields);
 
 
 
@@ -167,7 +161,7 @@ export const loginUser = async (req, res, next) => {
         const user = await UserModel.findOne({ email: email.toLowerCase() }).select("+password")
 
 
-        if (!user) return next(new ErrorHandler("Invalid Credentials", 200))
+        if (!user) return next(new ErrorHandler("Invalid Credentials", 200)) 
 
         const isMatch = await bcrypt.compare(password, user.password);
 
@@ -217,22 +211,17 @@ export const forgotPassword = async (req, res, next) => {
         await user.save({ validateBeforeSave: false });
 
 
-        const resetUrl = `https://www.gamrslog.online/auth/reset/${resetToken}`;
-        const message = `
-            <p>Please click on the link below to reset your password:</p>
-            <a href="${resetUrl}">Reset Link</a>
-            <p>If you did not request this email, please ignore it.</p>
-        `;
+        const message = `Your password reset token is as follows:\n\n${resetToken}\n\nif you have not 
+        requested this email, then ignore it.`
 
         try {
             await sendEmail({
                 email: user.email,
-                subject: "GamrsLog Password Recovery",
-                message,
-                html: message
+                subject: "Tuale Password Recovery",
+                message
             })
 
-            return res.status(200).json({
+            res.status(200).json({
                 success: true,
                 message: `Email sent to ${user.email}`
             })
@@ -311,6 +300,26 @@ export const resetPassword = async (req, res, next) => {
             success: true,
             token: authToken,
             name: user.name
+        })
+
+    } catch (error) {
+        return next(error)
+    }
+}
+
+export const getLoggedInUser = async(req,res,next)=>{
+    const {_id} = req.user;
+
+    try {  
+        const user = await UserModel.findById(_id)
+        .populate("cartItems.product") 
+        .populate("wishItems.product")  
+
+
+        return res.status(200).json({
+            success: true,
+            user, 
+            
         })
 
     } catch (error) {
