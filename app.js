@@ -4,6 +4,7 @@ import errorMiddleware from "./middlewares/errorsMiddleware"
 import auth from "./routes/auth"    
 import cors from "cors"; 
 import fileUpload from "express-fileupload"
+import products from "./routes/product.js" 
 
 
 
@@ -18,7 +19,9 @@ app.use(fileUpload({
     useTempFiles : true
 }));
 
-app.use('/api/v1',auth);    
+app.use('/api/v1',auth);   
+app.use('/api/v1',products); 
+
 
 
 //Middleware to handle errors
