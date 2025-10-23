@@ -6,7 +6,7 @@ import APIFeatures from "../utils/apiFeatures.js";
 import cloudinary from "cloudinary"
 import {removeTemp} from "../utils/helpers.js"
 
-//To create a new product
+//To create a new products
 export const createProduct = async (req, res, next) => {
     const { name, category, subCategory,price, stock, description } = req.body;
     const { _id } = req.user
