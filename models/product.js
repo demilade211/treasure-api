@@ -7,66 +7,67 @@ const ProductSchema = new Schema({
         ref: "User",
         required: true
     },
-    name:{
+    name: {
         type: String,
         required: [true, "Please enter product name"],
         trim: true,
         maxlength: [100, "Product name cannot exceed 100 characters"]
 
     },
-    price:{
+    price: {
         type: Number,
         required: [true, "Please enter product price"],
         maxlength: [5, "Product name cannot exceed 5 characters"],
         default: 0.0
 
     },
-    description:{
+    description: {
         type: String,
         required: [true, "Please enter product description"],
 
     },
-    ratings:{
+    ratings: {
         type: Number,
         default: 0
     },
-    images:[ {
-        public_id:{
+    images: [{
+        public_id: {
             type: String,
             required: true
         },
-        url:{
+        url: {
             type: String,
             required: true
         }
     }],
-    category:{
+    category: {
         type: String,
         required: [true, "Please enter category for the product"],
         enum: {
-            values:[
-                "Events", 
-                "Gifts",  
+            values: [
+                "Events",
+                "Gifts",
                 "Fresh Flowers",
             ],
             message: "Please select correct category for product"
         }
     },
-    seller: {
-        type: String
-        // type: Schema.Types.ObjectId,//gets the  _id from user model
-        // ref: "Store",
-    },
-    stock:{
+    subcategory: [
+        {
+            type: String,
+            trim: true
+        }
+    ], 
+    stock: {
         type: Number,
         required: [true, "Please enter product stock"],
         maxlength: [5, "It can't exceed 5 characters"]
     },
-    numOfReviews:{
+    numOfReviews: {
         type: Number,
         default: 0
     },
-    reviews:[{
+    reviews: [{
         user: {
             type: Schema.Types.ObjectId,//gets the  _id from user model
             ref: "User",
@@ -76,16 +77,16 @@ const ProductSchema = new Schema({
             type: String,
             required: true
         },
-        rating:{
+        rating: {
             type: Number,
             required: true
         },
-        comment:{
+        comment: {
             type: String,
             required: true
         }
     }]
-        
+
 },
-{timestamps: true});
+    { timestamps: true });
 export default mongoose.model("Product", ProductSchema);

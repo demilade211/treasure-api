@@ -2,7 +2,7 @@ import ProductModel from "../models/product.js"
 import UserModel from "../models/user.js"
 import ErrorHandler from "../utils/errorHandler.js";
 import APIFeatures from "../utils/apiFeatures.js";
-//import products from "../data/products.json"
+import products from "../data/products.json"
 import cloudinary from "cloudinary"
 import {removeTemp} from "../utils/helpers.js"
 
@@ -61,8 +61,8 @@ export const createProduct = async (req, res, next) => {
 }
 
 export const createManyProducts = async (req, res, next) => {
-    try {
-        req.body.user = req.user._id
+    try { 
+        
 
         const newP = products.map(val => {
             return {
