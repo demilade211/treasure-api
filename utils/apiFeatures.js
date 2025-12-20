@@ -13,7 +13,7 @@ class APIFeatures {
 
         this.query = this.query.find({ ...keyword });
         return this;
-    }
+    } 
 
     filter() {
         const queryCopy = { ...this.queryStr }/*
@@ -23,9 +23,13 @@ class APIFeatures {
         const removeFields = ['keyword', "limit", 'page']// because these arent part of keys in the database we have to remove them so it wont affect our query
         removeFields.forEach(removeField => delete queryCopy[removeField])
 
-        // Handle subCategory: check if the product array contains the selected subcategory
+        // Build the final query object
+        const finalQuery = {};
+
+        // Handle subcategory (array field)
         if (queryCopy.subCategory) {
-            queryCopy.subCategory = { $in: [queryCopy.subCategory] };
+            finalQuery.subcategory = { $in: [queryCopy.subCategory] };
+            delete queryCopy.subCategory;
         }
 
         //Advance filter for price rating etc
@@ -41,7 +45,10 @@ class APIFeatures {
             this command finds the prices greater or equal to 10 but less than or equal to 100
          */
 
-        this.query = this.query.find(JSON.parse(queryStr));
+        // Merge both filters
+        Object.assign(finalQuery, JSON.parse(queryStr));
+
+        this.query = this.query.find(finalQuery);
         return this;
     }
 
