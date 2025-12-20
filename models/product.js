@@ -45,9 +45,9 @@ const ProductSchema = new Schema({
         required: [true, "Please enter category for the product"],
         enum: {
             values: [
-                "Events",
-                "Gifts",
-                "Fresh Flowers",
+                "events",
+                "gifts",
+                "flowers",
             ],
             message: "Please select correct category for product"
         }

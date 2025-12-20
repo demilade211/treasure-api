@@ -3,17 +3,17 @@
         "name": "Scarlet Devotion",
         "price": 620000,
         "description": "80 Red Roses with Baby Breath Fillers.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Just Because",
-            "Proposal",
-            "Valentine's Day",
-            "Apology",
-            "I Miss You",
-            "Date Night",
-            "Be My Girlfriend"
+            "birthday",
+            "anniversary",
+            "just-because",
+            "proposal",
+            "valentines-day",
+            "apology",
+            "i-miss-you",
+            "date-night",
+            "be-my-girlfriend"
         ],
         "stock": 10,
         "images": [
@@ -27,14 +27,14 @@
         "name": "Aurora",
         "price": 450000,
         "description": "A stunning combination of warm-hued roses, spray roses and lush fillers designed for unforgettable moments.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Heartfelt Gestures",
-            "I Miss You",
-            "Thinking of You",
-            "I Love You"
+            "birthday",
+            "anniversary",
+            "heartfelt-gestures",
+            "i-miss-you",
+            "thinking-of-you",
+            "i-love-you"
         ],
         "stock": 10,
         "images": [
@@ -48,18 +48,18 @@
         "name": "Currency Of Love",
         "price": 3850000,
         "description": "A luxury arrangement of $2000 cash, 50 mixed red, white and pink roses with fillers.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Romantic Gestures",
-            "Just Because",
-            "I Miss You",
-            "Date Night",
-            "I Love You",
-            "Thinking of You",
-            "Thank You",
-            "Be My Girlfriend"
+            "birthday",
+            "anniversary",
+            "romantic-gestures",
+            "just-because",
+            "i-miss-you",
+            "date-night",
+            "i-love-you",
+            "thinking-of-you",
+            "thank-you",
+            "be-my-girlfriend"
         ],
         "stock": 5,
         "images": [
@@ -73,15 +73,15 @@
         "name": "Timeless Promise",
         "price": 300000,
         "description": "A classic bouquet of 40 red and white roses symbolizing everlasting love.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Proposal",
-            "Date Night",
-            "Thinking of You",
-            "Valentine's Day",
-            "I Miss You",
-            "Birthday"
+            "anniversary",
+            "proposal",
+            "date-night",
+            "thinking-of-you",
+            "valentines-day",
+            "i-miss-you",
+            "birthday"
         ],
         "stock": 10,
         "images": [
@@ -95,13 +95,13 @@
         "name": "Bianca",
         "price": 360000,
         "description": "A vibrant mix of 50 yellow and fuchsia pink blooms radiating joy and elegance.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Congratulations",
-            "Just Because",
-            "Thinking of You",
-            "Thank You"
+            "birthday",
+            "congratulations",
+            "just-because",
+            "thinking-of-you",
+            "thank-you"
         ],
         "stock": 10,
         "images": [
@@ -115,15 +115,15 @@
         "name": "Viola",
         "price": 220000,
         "description": "A graceful bouquet of pink and lilac roses with baby's breath.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Just Because",
-            "Thinking of You",
-            "I Miss You",
-            "I Love You",
-            "Thank You"
+            "anniversary",
+            "birthday",
+            "just-because",
+            "thinking-of-you",
+            "i-miss-you",
+            "i-love-you",
+            "thank-you"
         ],
         "stock": 10,
         "images": [
@@ -137,16 +137,16 @@
         "name": "True Romance",
         "price": 400000,
         "description": "A lush mix of red, pink, white roses expressing deep affection and devotion.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Valentine's Day",
-            "Anniversary",
-            "I Love You",
-            "Date Night",
-            "Proposal",
-            "Just Because",
-            "Thinking of You",
-            "Congratulations"
+            "valentines-day",
+            "anniversary",
+            "i-love-you",
+            "date-night",
+            "proposal",
+            "just-because",
+            "thinking-of-you",
+            "congratulations"
         ],
         "stock": 10,
         "images": [
@@ -160,12 +160,12 @@
         "name": "Radiant Harmony",
         "price": 175000,
         "description": "A vibrant mix of roses and lilies celebrating joy, love and togetherness.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Congratulations",
-            "Birthday",
-            "Mother's Day",
-            "Thank You"
+            "congratulations",
+            "birthday",
+            "mothers-day",
+            "thank-you"
         ],
         "stock": 10,
         "images": [
@@ -179,13 +179,13 @@
         "name": "Sugar Bloom",
         "price": 280000,
         "description": "A round basket of blush pink roses with baby's breath and lilac fillers.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Just Because",
-            "Mother's Day",
-            "Welcome Baby Girl",
-            "Bridal Shower",
-            "Get Well Soon"
+            "just-because",
+            "mothers-day",
+            "welcome-baby-girl",
+            "bridal-shower",
+            "get-well-soon"
         ],
         "stock": 10,
         "images": [
@@ -199,17 +199,17 @@
         "name": "With All My Heart",
         "price": 400000,
         "description": "A heart-shaped floral arrangement of 50 red and white roses expressing deep love and devotion.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Just Because",
-            "I Love You",
-            "Romantic Gestures",
-            "Thinking of You",
-            "I Miss You",
-            "Be My Girlfriend",
-            "Valentine's Day"
+            "anniversary",
+            "birthday",
+            "just-because",
+            "i-love-you",
+            "romantic-gestures",
+            "thinking-of-you",
+            "i-miss-you",
+            "be-my-girlfriend",
+            "valentines-day"
         ],
         "stock": 10,
         "images": [
@@ -223,16 +223,16 @@
         "name": "Camila",
         "price": 105000,
         "description": "A charming bouquet of 6 ivory roses, spray roses and baby's breath wrapped in soft nude tones.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Just Because",
-            "Apology",
-            "Welcome Baby",
-            "Thank You",
-            "Birthday",
-            "Bridal Shower",
-            "Thinking of You",
-            "Be My Girlfriend"
+            "just-because",
+            "apology",
+            "welcome-baby",
+            "thank-you",
+            "birthday",
+            "bridal-shower",
+            "thinking-of-you",
+            "be-my-girlfriend"
         ],
         "stock": 10,
         "images": [
@@ -246,16 +246,16 @@
         "name": "Grace",
         "price": 400000,
         "description": "A refined mix of 50 ivory, pink and yellow roses with baby's breath expressing elegance and softness.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Mother's Day",
-            "Get Well Soon",
-            "Apology",
-            "Welcome Baby",
-            "Just Because",
-            "Bridal Shower",
-            "Thank You",
-            "Corporate Gift"
+            "mothers-day",
+            "get-well-soon",
+            "apology",
+            "welcome-baby",
+            "just-because",
+            "bridal-shower",
+            "thank-you",
+            "corporate-gift"
         ],
         "stock": 10,
         "images": [
@@ -269,15 +269,15 @@
         "name": "Celeste",
         "price": 700000,
         "description": "An elegant floral arrangement of pastel pink roses and lilies, feminine and heavenly.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Mother's Day",
-            "Thinking of You",
-            "Birthday",
-            "Congratulations",
-            "Welcome Baby",
-            "Just Because",
-            "Celebration"
+            "mothers-day",
+            "thinking-of-you",
+            "birthday",
+            "congratulations",
+            "welcome-baby",
+            "just-because",
+            "celebration"
         ],
         "stock": 10,
         "images": [
@@ -291,15 +291,15 @@
         "name": "Juliet",
         "price": 165000,
         "description": "A romantic bouquet of blush pink, purple, cream and white roses full of personality.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Romantic Surprises",
-            "Just Because",
-            "I Love You",
-            "Bridal Shower",
-            "Congratulations",
-            "Thinking of You"
+            "birthday",
+            "romantic-surprises",
+            "just-because",
+            "i-love-you",
+            "bridal-shower",
+            "congratulations",
+            "thinking-of-you"
         ],
         "stock": 10,
         "images": [
@@ -313,16 +313,16 @@
         "name": "Monroe",
         "price": 240000,
         "description": "A bold all-red bouquet of 30 roses symbolizing passion and unforgettable romance.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Romantic Proposal",
-            "Valentine's Day",
-            "Date Night",
-            "Be My Girlfriend",
-            "Just Because",
-            "I Love You",
-            "I Miss You"
+            "anniversary",
+            "romantic-proposal",
+            "valentines-day",
+            "date-night",
+            "be-my-girlfriend",
+            "just-because",
+            "i-love-you",
+            "i-miss-you"
         ],
         "stock": 10,
         "images": [
@@ -336,14 +336,14 @@
         "name": "Ruby",
         "price": 410000,
         "description": "A vibrant mix of 50 red and yellow roses with elegant fillers celebrating passion and joy.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Romantic Surprise",
-            "Grand Gestures",
-            "Get Well Soon",
-            "Thinking of You",
-            "Just Because",
-            "I Miss You"
+            "romantic-surprise",
+            "grand-gestures",
+            "get-well-soon",
+            "thinking-of-you",
+            "just-because",
+            "i-miss-you"
         ],
         "stock": 10,
         "images": [
@@ -357,14 +357,14 @@
         "name": "Fleur",
         "price": 160000,
         "description": "A minimal arrangement of soft pink and ivory roses embraced by baby's breath.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Just Because",
-            "Thinking of You",
-            "Baby Shower",
-            "Soft Apology",
-            "Bridal Shower"
+            "birthday",
+            "just-because",
+            "thinking-of-you",
+            "baby-shower",
+            "soft-apology",
+            "bridal-shower"
         ],
         "stock": 10,
         "images": [
@@ -378,15 +378,15 @@
         "name": "Valentina",
         "price": 165000,
         "description": "A graceful and magnetic bouquet that speaks the language of love without words.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Valentine's Day",
-            "Birthday",
-            "Romantic Gestures",
-            "Thinking of You",
-            "Apology",
-            "Just Because",
-            "Date Night"
+            "valentines-day",
+            "birthday",
+            "romantic-gestures",
+            "thinking-of-you",
+            "apology",
+            "just-because",
+            "date-night"
         ],
         "stock": 10,
         "images": [
@@ -400,14 +400,14 @@
         "name": "Rosa",
         "price": 350000,
         "description": "A classic soft pink bouquet expressing admiration, love and heartfelt celebration.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Just Because",
-            "Thinking of You",
-            "Bridal Shower",
-            "Baby Shower",
-            "Thank You"
+            "birthday",
+            "just-because",
+            "thinking-of-you",
+            "bridal-shower",
+            "baby-shower",
+            "thank-you"
         ],
         "stock": 10,
         "images": [
@@ -421,13 +421,13 @@
         "name": "Mon Chérie (My Darling)",
         "price": 250000,
         "description": "30 red roses in a lush red velvet box curated for precious romantic moments.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Valentine's Day",
-            "Thinking of You",
-            "Love Gestures"
+            "anniversary",
+            "birthday",
+            "valentines-day",
+            "thinking-of-you",
+            "love-gestures"
         ],
         "stock": 10,
         "images": [
@@ -441,12 +441,12 @@
         "name": "Bright Blooms",
         "price": 385000,
         "description": "A vibrant mix of bright yellow and pink roses with baby's breath celebrating joy and warmth.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Thank You",
-            "Cheer Up",
-            "Get Well Soon"
+            "birthday",
+            "thank-you",
+            "cheer-up",
+            "get-well-soon"
         ],
         "stock": 10,
         "images": [
@@ -460,15 +460,15 @@
         "name": "Primavera",
         "price": 300000,
         "description": "A joyful spring-inspired bouquet combining buttercream, ivory white, yellow and soft pink blooms.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Baby Shower",
-            "Housewarming",
-            "Wedding",
-            "Just Because",
-            "Thank You",
-            "New Beginnings"
+            "birthday",
+            "baby-shower",
+            "housewarming",
+            "wedding",
+            "just-because",
+            "thank-you",
+            "new-beginnings"
         ],
         "stock": 10,
         "images": [
@@ -482,14 +482,14 @@
         "name": "La Vie en Rose",
         "price": 280000,
         "description": "A lavish romantic bouquet of deep reds, pinks, lilacs and blush blooms.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Thinking of You",
-            "Valentine's Day",
-            "I Miss You",
-            "Date Night"
+            "anniversary",
+            "birthday",
+            "thinking-of-you",
+            "valentines-day",
+            "i-miss-you",
+            "date-night"
         ],
         "stock": 10,
         "images": [
@@ -503,14 +503,14 @@
         "name": "Bellarosa",
         "price": 500000,
         "description": "A romantic statement bouquet of 65 mixed roses with exotic fillers wrapped in pearled layers.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Valentine's Day",
-            "Thinking of You",
-            "Love Gestures",
-            "I Miss You"
+            "anniversary",
+            "birthday",
+            "valentines-day",
+            "thinking-of-you",
+            "love-gestures",
+            "i-miss-you"
         ],
         "stock": 10,
         "images": [
@@ -524,14 +524,14 @@
         "name": "Pink Lemonade",
         "price": 220000,
         "description": "A cheerful bouquet of 25 pink and yellow roses with hypericum fillers.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Just Because",
-            "Baby Shower",
-            "Gender Reveal",
-            "Thinking of You",
-            "Cheer Up"
+            "birthday",
+            "just-because",
+            "baby-shower",
+            "gender-reveal",
+            "thinking-of-you",
+            "cheer-up"
         ],
         "stock": 10,
         "images": [
@@ -545,15 +545,15 @@
         "name": "Blush Affair",
         "price": 350000,
         "description": "A romantic medley of 50 blush and hot pink roses expressing admiration and charm.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "First Date",
-            "Birthday",
-            "Valentine's Day",
-            "Soft Gestures",
-            "Thinking of You",
-            "Just Because",
-            "Anniversary"
+            "first-date",
+            "birthday",
+            "valentines-day",
+            "soft-gestures",
+            "thinking-of-you",
+            "just-because",
+            "anniversary"
         ],
         "stock": 10,
         "images": [
@@ -567,12 +567,12 @@
         "name": "Elora",
         "price": 178500,
         "description": "A soft and elegant bouquet of blush, ivory and lavender roses with baby's breath.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Love Notes",
-            "Romantic Surprises",
-            "Just Because"
+            "birthday",
+            "love-notes",
+            "romantic-surprises",
+            "just-because"
         ],
         "stock": 10,
         "images": [
@@ -586,17 +586,17 @@
         "name": "Sweetheart's Mix",
         "price": 235000,
         "description": "A tender mix of 30 roses and gypsophila designed to melt hearts.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Just Because",
-            "Bridal Shower",
-            "Welcome Baby",
-            "It's a Girl",
-            "Girlfriend's Day",
-            "Valentine's Day",
-            "Thinking of You"
+            "anniversary",
+            "birthday",
+            "just-because",
+            "bridal-shower",
+            "welcome-baby",
+            "its-a-girl",
+            "girlfriends-day",
+            "valentines-day",
+            "thinking-of-you"
         ],
         "stock": 10,
         "images": [
@@ -610,12 +610,12 @@
         "name": "Candy Crush",
         "price": 150000,
         "description": "A sweet explosion of roses, carnations and baby's breath in playful vibrant shades.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Besties",
-            "Sweethearts",
-            "Thank You"
+            "birthday",
+            "besties",
+            "sweethearts",
+            "thank-you"
         ],
         "stock": 10,
         "images": [
@@ -629,15 +629,15 @@
         "name": "Say My Name",
         "price": 520000,
         "description": "A luxury bouquet of 70 premium red roses adorned with a personalized initial.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Proposal",
-            "Romantic Surprise",
-            "Personalized Gift",
-            "Thank You",
-            "Thinking of You"
+            "anniversary",
+            "birthday",
+            "proposal",
+            "romantic-surprise",
+            "personalized-gift",
+            "thank-you",
+            "thinking-of-you"
         ],
         "stock": 5,
         "images": [
@@ -651,13 +651,13 @@
         "name": "Trilogy Of Love",
         "price": 2000000,
         "description": "A grand luxury arrangement of 300 premium red roses across three velvet boxes.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Luxury Birthday",
-            "Valentine's Day",
-            "Proposal",
-            "Just Because I Love You"
+            "anniversary",
+            "luxury-birthday",
+            "valentines-day",
+            "proposal",
+            "just-because i-love-you"
         ],
         "stock": 3,
         "images": [
@@ -671,12 +671,12 @@
         "name": "Violette",
         "price": 365000,
         "description": "A graceful bouquet of 45 purple and pink roses with baby's breath and hypericum berries.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Mother's Day",
-            "Romantic Gestures"
+            "anniversary",
+            "birthday",
+            "mothers-day",
+            "romantic-gestures"
         ],
         "stock": 10,
         "images": [
@@ -690,13 +690,13 @@
         "name": "Sweet Harmony",
         "price": 185000,
         "description": "A romantic blend of red, white and blush spray roses with baby's breath.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Heartfelt Celebrations",
-            "Birthday",
-            "Just Because",
-            "Valentine's Day"
+            "anniversary",
+            "Heartfelt celebration",
+            "birthday",
+            "just-because",
+            "valentines-day"
         ],
         "stock": 10,
         "images": [
@@ -710,17 +710,17 @@
         "name": "My Forever Love (100 Roses)",
         "price": 700000,
         "description": "A breathtaking velvet box arrangement of 100 premium roses expressing endless devotion.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "I Love You",
-            "Valentine's Day",
-            "Just Because",
-            "Thinking of You",
-            "I Miss You",
-            "Thank You",
-            "Mother's Day"
+            "birthday",
+            "anniversary",
+            "i-love-you",
+            "valentines-day",
+            "just-because",
+            "thinking-of-you",
+            "i-miss-you",
+            "thank-you",
+            "mothers-day"
         ],
         "stock": 5,
         "images": [
@@ -734,16 +734,16 @@
         "name": "Red Affair",
         "price": 375000,
         "description": "A bold bouquet of 50 red roses with baby's breath and green fillers.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Date Night",
-            "I Love You",
-            "Proposal",
-            "Valentine's Day",
-            "I Miss You",
-            "Thinking of You",
-            "Birthday"
+            "anniversary",
+            "date-night",
+            "i-love-you",
+            "proposal",
+            "valentines-day",
+            "i-miss-you",
+            "thinking-of-you",
+            "birthday"
         ],
         "stock": 10,
         "images": [
@@ -757,15 +757,15 @@
         "name": "Ethereal",
         "price": 375000,
         "description": "A dreamy arrangement of pure white roses symbolizing grace, purity and everlasting love.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Wedding",
-            "Sympathy",
-            "Mother's Day",
-            "I Love You",
-            "Thinking of You",
-            "Just Because"
+            "anniversary",
+            "wedding",
+            "sympathy",
+            "mothers-day",
+            "i-love-you",
+            "thinking-of-you",
+            "just-because"
         ],
         "stock": 10,
         "images": [
@@ -779,16 +779,16 @@
         "name": "Ivory",
         "price": 100000,
         "description": "A timeless arrangement of 12 white roses kissed with baby's breath.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Wedding",
-            "Just Because",
-            "Sympathy",
-            "Thank You",
-            "Mother's Day",
-            "Thinking of You",
-            "Birthday"
+            "anniversary",
+            "wedding",
+            "just-because",
+            "sympathy",
+            "thank-you",
+            "mothers-day",
+            "thinking-of-you",
+            "birthday"
         ],
         "stock": 10,
         "images": [
@@ -802,16 +802,16 @@
         "name": "Rosa-nova",
         "price": 265000,
         "description": "A chic romantic blend of pink, blush, red and cream spray roses.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Just Because",
-            "Congratulations",
-            "Valentine's Day",
-            "I Love You",
-            "Date Night",
-            "Thinking of You"
+            "anniversary",
+            "birthday",
+            "just-because",
+            "congratulations",
+            "valentines-day",
+            "i-love-you",
+            "date-night",
+            "thinking-of-you"
         ],
         "stock": 10,
         "images": [
@@ -825,13 +825,13 @@
         "name": "Vivian",
         "price": 240000,
         "description": "A vibrant medley of fuchsia gerberas with pink and white roses softened by baby's breath.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Congratulations",
-            "It's a Girl",
-            "Thinking of You",
-            "Mother's Day"
+            "birthday",
+            "congratulations",
+            "its-a-girl",
+            "thinking-of-you",
+            "mothers-day"
         ],
         "stock": 10,
         "images": [
@@ -845,14 +845,14 @@
         "name": "Mariposa",
         "price": 88500,
         "description": "A joyful burst of soft pink, sunny yellow and crisp white blooms radiating happiness.",
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Birthday",
-            "Just Because",
-            "Thinking of You",
-            "Congratulations",
-            "Mother's Day",
-            "It's a Girl"
+            "birthday",
+            "just-because",
+            "thinking-of-you",
+            "congratulations",
+            "mothers-day",
+            "its-a-girl"
         ],
         "stock": 10,
         "images": [
@@ -873,12 +873,12 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739122/g38_llo4nb.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Just Because",
-            "Thinking of You"
+            "birthday",
+            "anniversary",
+            "just-because",
+            "thinking-of-you"
         ],
         "stock": 5
     },
@@ -893,16 +893,16 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739102/g13_xtx4bq.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday Packages"
+            "birthday-packages"
         ],
         "stock": 50
     },
     {
         "name": "The Blue Royale Package",
         "price": 400000,
-        "description": "1 Customized Bubble Balloon, 4 heart helium balloons, 1 personalized picture cake, Bouquet of Mixed Roses",
+        "description": "1 Customized Bubble Balloon, 4 heart helium balloons, 1 personalized picture cake, bouquet of Mixed Roses",
         "ratings": 0,
         "images": [
             {
@@ -910,18 +910,18 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739101/g14_t7iovl.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Graduation",
-            "Congratulations",
-            "Birthdays"
+            "graduation",
+            "congratulations",
+            "birthday"
         ],
         "stock": 50
     },
     {
         "name": "Sweetheart Surprise",
         "price": 720000,
-        "description": "A grand romantic gesture designed to speak the language of deep affection and timeless love. Package includes: Bouquet of 50 Red roses with fillers, 2 Tier Rose Cake, Chocolate Gift Box.",
+        "description": "A grand romantic gesture designed to speak the language of deep affection and timeless love. Package includes: bouquet of 50 Red roses with fillers, 2 Tier Rose Cake, Chocolate Gift Box.",
         "ratings": 0,
         "images": [
             {
@@ -929,18 +929,18 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739107/g21_rwkdlp.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthdays",
+            "birthday",
             "Anniversaries",
-            "Romantic Surprises"
+            "romantic-surprises"
         ],
         "stock": 50
     },
     {
         "name": "Stacked With Love",
         "price": 820000,
-        "description": "A luxurious arrangement of 20 fresh pink roses delicately paired with N400,000 cash bundles — designed to say 'I love you' in the most unforgettable way. This box is ideal for that high-impact celebration where class meets cash, all wrapped in florals and finesse.",
+        "description": "A luxurious arrangement of 20 fresh pink roses delicately paired with N400,000 cash bundles — designed to say 'i-love-you' in the most unforgettable way. This box is ideal for that high-impact celebration where class meets cash, all wrapped in florals and finesse.",
         "ratings": 0,
         "images": [
             {
@@ -948,20 +948,20 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739103/g6_w64k2a.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthdays",
+            "birthday",
             "Anniversaries",
-            "Romantic Surprises",
-            "Thinking of You",
-            "Graduation"
+            "romantic-surprises",
+            "thinking-of-you",
+            "graduation"
         ],
         "stock": 50
     },
     {
         "name": "XOXO Deluxe",
         "price": 1120000,
-        "description": "Bouquet of 20 Fresh Roses, Box of 20 Fresh Roses, 7” Buttercream cake, Gift hamper with Moet Champagne, Heartshaped Hellium Balloons, Lips Balloon, Customized Bubble Balloon.",
+        "description": "bouquet of 20 Fresh Roses, Box of 20 Fresh Roses, 7” Buttercream cake, Gift hamper with Moet Champagne, Heartshaped Hellium Balloons, Lips Balloon, Customized Bubble Balloon.",
         "ratings": 0,
         "images": [
             {
@@ -969,11 +969,11 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739138/g57_jxligi.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthdays",
+            "birthday",
             "Anniversaries",
-            "Romantic Surprises"
+            "romantic-surprises"
         ],
         "stock": 50
     },
@@ -988,11 +988,11 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739105/g4_sufiyc.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthdays",
+            "birthday",
             "Anniversaries",
-            "Romantic Surprises"
+            "romantic-surprises"
         ],
         "stock": 50
     },
@@ -1011,14 +1011,14 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739105/g11_uugbnv.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Dinner Set Up",
-            "Birthday",
-            "Brunch",
-            "Bridal showers",
-            "Proposal dinner",
-            "Intimate dinners"
+            "dinner-setup",
+            "birthday",
+            "brunch",
+            "bridal-showers",
+            "proposal-dinner",
+            "intimate-dinners"
         ],
         "stock": 50
     },
@@ -1037,15 +1037,15 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739107/g17_gcknbk.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Love & Romance",
-            "Romantic Decoration"
+            "love-and-romance",
+            "romantic-decoration"
         ],
         "stock": 50
     },
     {
-        "name": "Butterflies & Bloom Backdrop",
+        "name": "Butterflies & Bloom backdrop",
         "price": 400000,
         "description": "This pastel setup brings elegance, sweetness and a playful touch to any celebration.",
         "ratings": 0,
@@ -1055,14 +1055,14 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739106/g18_ty6nr8.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday Backdrop",
-            "Birthday",
-            "Kids Parties",
-            "Brunch",
-            "Bridal Showers",
-            "Baby Shower"
+            "birthday-backdrop",
+            "birthday",
+            "kids-parties",
+            "brunch",
+            "bridal-showers",
+            "baby-shower"
         ],
         "stock": 50
     },
@@ -1077,12 +1077,12 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739112/g23_qihk0v.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday Backdrop",
-            "Birthday",
-            "Intimate Celebrations",
-            "Stylish photo moments"
+            "birthday-backdrop",
+            "birthday",
+            "Intimate celebration",
+            "stylish-photo-moments"
         ],
         "stock": 50
     },
@@ -1097,10 +1097,10 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739112/g23_qihk0v.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary"
+            "birthday",
+            "anniversary"
         ],
         "stock": 50
     },
@@ -1115,13 +1115,13 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739112/g24_ggosru.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Just Because",
-            "Mothers Day",
-            "Romantic Surprises"
+            "birthday",
+            "anniversary",
+            "just-because",
+            "mothers-day",
+            "romantic-surprises"
         ],
         "stock": 50
     },
@@ -1136,11 +1136,11 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739114/g25_ehg60z.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Romantic Surprises"
+            "birthday",
+            "anniversary",
+            "romantic-surprises"
         ],
         "stock": 50
     },
@@ -1155,21 +1155,21 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739115/g26_wbesj3.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Romantic Surprises",
-            "Mothers Day",
-            "Corporate Gift",
-            "Just Because"
+            "birthday",
+            "anniversary",
+            "romantic-surprises",
+            "mothers-day",
+            "corporate-gift",
+            "just-because"
         ],
         "stock": 50
     },
     {
         "name": "The Grand Gesture Package",
         "price": 1380000,
-        "description": "The Grand Gesture Package is the perfect way to express 'I choose you, today and always.' Crafted for unforgettable celebrations, includes Bouquet of 50 Roses, Dummy Cheque, Luxury Giftbox of Moët Champagne, Chocolates, Gift Items, Large Sized Double Stuffed Orbs Helium Balloon, Heart, Lip, and Star Helium Balloons.",
+        "description": "The Grand Gesture Package is the perfect way to express 'I choose you, today and always.' Crafted for unforgettable celebration, includes bouquet of 50 Roses, Dummy Cheque, Luxury Giftbox of Moët Champagne, Chocolates, Gift Items, Large Sized Double Stuffed Orbs Helium Balloon, Heart, Lip, and Star Helium Balloons.",
         "ratings": 0,
         "images": [
             {
@@ -1181,21 +1181,21 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739115/g28_s4luwc.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Romantic Surprises",
-            "Mothers Day",
-            "Corporate Gift",
-            "Just Because"
+            "birthday",
+            "anniversary",
+            "romantic-surprises",
+            "mothers-day",
+            "corporate-gift",
+            "just-because"
         ],
         "stock": 50
     },
     {
         "name": "Love Overload Package",
         "price": 1050000,
-        "description": "The Love Overload Package is the ultimate way to say 'I choose you, today and always.' For unforgettable celebrations, includes Bouquet of 20 Fresh Roses, Box of 20 Fresh Roses, Mixed Flowers Bouquet, 7” Heartshaped Cake, 7” Round Cake, 2 Double Stuffed Bubble Helium Balloon, 10 Heart Helium Balloons, Lip Helium Balloon.",
+        "description": "The Love Overload Package is the ultimate way to say 'I choose you, today and always.' For unforgettable celebration, includes bouquet of 20 Fresh Roses, Box of 20 Fresh Roses, Mixed Flowers bouquet, 7” Heartshaped Cake, 7” Round Cake, 2 Double Stuffed Bubble Helium Balloon, 10 Heart Helium Balloons, Lip Helium Balloon.",
         "ratings": 0,
         "images": [
             {
@@ -1203,11 +1203,11 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739115/g29_uoef1r.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Romantic Surprises"
+            "birthday",
+            "anniversary",
+            "romantic-surprises"
         ],
         "stock": 50
     },
@@ -1222,13 +1222,13 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739115/g30_a76cnt.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Thinking of You",
-            "Apology",
-            "Celebrations"
+            "anniversary",
+            "birthday",
+            "thinking-of-you",
+            "apology",
+            "celebration"
         ],
         "stock": 50
     },
@@ -1247,14 +1247,14 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739119/g32_ypxflf.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Thinking of You",
-            "Mothers Day",
-            "Apology",
-            "Romantic Surprises"
+            "anniversary",
+            "birthday",
+            "thinking-of-you",
+            "mothers-day",
+            "apology",
+            "romantic-surprises"
         ],
         "stock": 50
     },
@@ -1269,9 +1269,9 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739120/g33_tawyby.png"
             }
         ],
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Bouquet"
+            "bouquet"
         ],
         "stock": 50
     },
@@ -1286,16 +1286,16 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739121/g34_ujgrxn.png"
             }
         ],
-        "category": "Fresh Flowers",
+        "category": "flowers",
         "subcategory": [
-            "Bouquet"
+            "bouquet"
         ],
         "stock": 50
     },
     {
         "name": "Pure Harmony",
         "price": 675000,
-        "description": "Introducing Pure Harmony, a beautifully curated gift experience designed for moments that call for softness, elegance, and heartfelt expression. Includes: Bouquet of 40 white roses, Fresh fruit platter, Luxury Gift Box.",
+        "description": "Introducing Pure Harmony, a beautifully curated gift experience designed for moments that call for softness, elegance, and heartfelt expression. Includes: bouquet of 40 white roses, Fresh fruit platter, Luxury Gift Box.",
         "ratings": 0,
         "images": [
             {
@@ -1303,11 +1303,11 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739122/g36_bcsdhc.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Get Well Soon",
-            "Birthday",
-            "Just Because"
+            "get-well-soon",
+            "birthday",
+            "just-because"
         ],
         "stock": 50
     },
@@ -1322,9 +1322,9 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739121/g37_spys60.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Backdrop"
+            "backdrop"
         ],
         "stock": 50
     },
@@ -1339,12 +1339,12 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739122/g38_llo4nb.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Just Because",
-            "Thinking of You"
+            "birthday",
+            "anniversary",
+            "just-because",
+            "thinking-of-you"
         ],
         "stock": 50
     },
@@ -1359,18 +1359,18 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739127/g39_acyysa.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthdays",
+            "birthday",
             "Anniversaries",
-            "Romantic Surprises"
+            "romantic-surprises"
         ],
         "stock": 50
     },
     {
         "name": "The Pastel Experience",
         "price": 1000000,
-        "description": "Luxury setup including heart-shaped balloon backdrop, floral vase arrangement, candelabras, ceiling & cluster balloons, rose petals, and custom orbs. Designed for birthdays, anniversaries, or romantic surprises.",
+        "description": "Luxury setup including heart-shaped balloon backdrop, floral vase arrangement, candelabras, ceiling & cluster balloons, rose petals, and custom orbs. Designed for birthday, anniversaries, or romantic-surprises.",
         "ratings": 0,
         "images": [
             {
@@ -1378,17 +1378,17 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739124/g40_vqwwhz.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Romantic Decoration",
-            "Birthday Backdrop"
+            "romantic-decoration",
+            "birthday-backdrop"
         ],
         "stock": 50
     },
     {
-        "name": "The Breakfast Luxe Box",
+        "name": "The breakfast Luxe Box",
         "price": 180000,
-        "description": "A beautifully curated morning experience featuring gourmet pastries, fresh fruits, sweet bites, and sparkling drink in a signature acrylic box. Perfect for birthdays, love notes, morning surprises, and elevated gifting.",
+        "description": "A beautifully curated morning experience featuring gourmet pastries, fresh fruits, sweet bites, and sparkling drink in a signature acrylic box. Perfect for birthday, love-notes, morning-surprises, and elevated gifting.",
         "ratings": 0,
         "images": [
             {
@@ -1396,17 +1396,17 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739125/g41_ulglee.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Breakfast",
-            "Morning Surprise"
+            "breakfast",
+            "morning-surprise"
         ],
         "stock": 50
     },
     {
-        "name": "The Eden Baby Backdrop",
+        "name": "The Eden Baby backdrop",
         "price": 350000,
-        "description": "A soft, elegant baby shower backdrop with lush green tones, gold features, nude accents, draped fabric, balloon clusters, floral details, and signature 'Oh Baby' sign. Perfect for baby showers, gender reveals, maternity shoots, and welcome baby Gifts.",
+        "description": "A soft, elegant baby-shower backdrop with lush green tones, gold features, nude accents, draped fabric, balloon clusters, floral details, and signature 'Oh Baby' sign. Perfect for baby-showers, gender-reveals, maternity shoots, and welcome-baby gifts.",
         "ratings": 0,
         "images": [
             {
@@ -1414,10 +1414,10 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739124/g42_eoqh75.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Backdrop",
-            "Baby Shower"
+            "backdrop",
+            "baby-shower"
         ],
         "stock": 50
     },
@@ -1436,17 +1436,17 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739129/g44_yyyprj.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Backdrop",
-            "Birthday"
+            "backdrop",
+            "birthday"
         ],
         "stock": 50
     },
     {
         "name": "Classic Trio Set",
         "price": 235000,
-        "description": "A beautifully curated trio featuring a custom bubble balloon, fresh floral bouquet, and birthday cake. Perfect for simple, thoughtful celebrations that feel premium and photo-ready.",
+        "description": "A beautifully curated trio featuring a custom bubble balloon, fresh floral bouquet, and birthday cake. Perfect for simple, thoughtful celebration that feel premium and photo-ready.",
         "ratings": 0,
         "images": [
             {
@@ -1454,17 +1454,17 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739132/g45_ksbyep.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary"
+            "birthday",
+            "anniversary"
         ],
         "stock": 50
     },
     {
-        "name": "The Celebration Set",
+        "name": "The celebration Set",
         "price": 950000,
-        "description": "Designed to make celebrations effortless and elegant. Includes double stuffed custom bubble balloon, bouquet of helium balloons, 2-tier birthday cake, and large fresh flower arrangement.",
+        "description": "Designed to make celebration effortless and elegant. Includes double stuffed custom bubble balloon, bouquet of helium balloons, 2-tier birthday cake, and large fresh flower arrangement.",
         "ratings": 0,
         "images": [
             {
@@ -1472,11 +1472,11 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739131/g47_fkyqiv.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Anniversary",
-            "Birthday",
-            "Romantic Surprises"
+            "anniversary",
+            "birthday",
+            "romantic-surprises"
         ],
         "stock": 50
     },
@@ -1491,12 +1491,12 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739132/g48_nic8wk.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Wellness",
-            "Hospital Visits",
-            "Corporate Gifting",
-            "Just Because"
+            "wellness",
+            "hospital-visits",
+            "corporate-gifting",
+            "just-because"
         ],
         "stock": 50
     },
@@ -1511,17 +1511,17 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739132/g50_om01cx.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Anniversary",
-            "Corporate Gift",
-            "Premium Gifting"
+            "birthday",
+            "anniversary",
+            "corporate-gift",
+            "premium-gifting"
         ],
         "stock": 50
     },
     {
-        "name": "The Signature Rose Initial Bouquet",
+        "name": "The Signature Rose Initial bouquet",
         "price": 710000,
         "description": "A stunning arrangement of 100 fresh red roses designed with a personalized name initial at the center — bold, romantic, and unforgettable. Available in red, pink, white, and mixed colors.",
         "ratings": 0,
@@ -1531,12 +1531,12 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739133/g53_jafnzg.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Birthday",
-            "Proposal",
-            "Anniversary",
-            "Romantic Gifting"
+            "birthday",
+            "proposal",
+            "anniversary",
+            "romantic-gifting"
         ],
         "stock": 50
     },
@@ -1551,11 +1551,11 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739132/g49_ujhe4o.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [
-            "Wellness",
-            "Corporate",
-            "Hospital Visits"
+            "wellness",
+            "corporate",
+            "hospital-visits"
         ],
         "stock": 50
     },
@@ -1570,7 +1570,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739132/g50_om01cx.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1585,7 +1585,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739132/g51_hagjzr.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1600,7 +1600,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739135/g52_ewsp0p.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1615,7 +1615,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739133/g53_jafnzg.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1630,7 +1630,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739133/g54_ezezam.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1645,7 +1645,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739139/g55_nbpitq.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1660,7 +1660,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739137/g56_aatydc.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1675,7 +1675,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739138/g57_jxligi.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1690,7 +1690,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739138/g58_lfowyp.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1705,7 +1705,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739149/g59_cejfvq.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1720,7 +1720,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739139/g60_xmfbzs.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1735,7 +1735,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739139/g61_hfbs8e.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     },
@@ -1750,7 +1750,7 @@
                 "url": "https://res.cloudinary.com/dfksbzr01/image/upload/v1765739139/g62_gqpu2j.png"
             }
         ],
-        "category": "Gifts",
+        "category": "gifts",
         "subcategory": [],
         "stock": 50
     }
