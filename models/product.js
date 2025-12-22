@@ -21,6 +21,11 @@ const ProductSchema = new Schema({
         default: 0.0
 
     },
+    previousPrice: {
+        type: Number,
+        default: 0.0
+
+    },
     description: {
         type: String,
         required: [true, "Please enter product description"],

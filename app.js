@@ -5,6 +5,8 @@ import auth from "./routes/auth"
 import cors from "cors"; 
 import fileUpload from "express-fileupload"
 import products from "./routes/product.js" 
+import payment from "./routes/payment.js" 
+import webhook from "./routes/webhook.js"
 
 
 
@@ -21,6 +23,8 @@ app.use(fileUpload({
 
 app.use('/api/v1',auth);   
 app.use('/api/v1',products); 
+app.use('/api/v1/payment',payment); 
+app.use('/api/v1/webhook',webhook);
 
 
 
