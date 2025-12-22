@@ -17,6 +17,7 @@ export const paystackWebhook = async (req, res, next) => {
     const event = req.body;
 
     if (event.event === "charge.success") {
+        console.log("Payment successful:", event.data);
         try {
             const { reference, amount, metadata } = event.data;
             const {
