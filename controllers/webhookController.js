@@ -6,7 +6,7 @@ dotenv.config({ path: "config/config.env" });
 
 export const paystackWebhook = async (req, res, next) => {
     const hash = crypto
-        .createHmac("sha512", process.env.PAYSTACK_SECRET_KEY)
+        .createHmac("sha512", process.env.PAYSTACK_SECRETE_KEY_TEST)
         .update(JSON.stringify(req.body))
         .digest("hex");
 
