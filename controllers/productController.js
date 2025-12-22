@@ -6,59 +6,77 @@ import products from "../data/products.json"
 import cloudinary from "cloudinary"
 import {removeTemp} from "../utils/helpers.js"
 
-//To create a new products
+//To create a new products 
 export const createProduct = async (req, res, next) => {
-    const { name, category, subCategory,price, stock, description } = req.body;
-    const { _id } = req.user
     try {
-        req.body.user = req.user._id
- 
-        // Check if files were uploaded
-        if (!req.files || Object.keys(req.files).length === 0) {
-            return next(new ErrorHandler('No files were uploaded.', 400));
+        const { name, category, price, stock, description } = req.body;
+        let { subCategory } = req.body;
+        const { _id } = req.user;
+
+        req.body.user = _id;
+
+        // Normalize subCategory → ALWAYS ARRAY
+        if (subCategory) {
+            if (Array.isArray(subCategory)) {
+                subCategory = subCategory.map(sc => sc.trim());
+            } else if (typeof subCategory === "string") {
+                // supports "birthday,anniversary"
+                subCategory = subCategory
+                    .split(",")
+                    .map(sc => sc.trim());
+            }
+        } else {
+            subCategory = [];
         }
 
-        const filesArray = Object.values(req.files); // Assuming your input field is named 'image'
- 
+        // Validate images
+        if (!req.files || Object.keys(req.files).length === 0) {
+            return next(new ErrorHandler("No files were uploaded.", 400));
+        }
 
-        // Upload images to Cloudinary and get URLs
+        const filesArray = Object.values(req.files);
+
+        // Upload images to Cloudinary
         const imageUrls = await Promise.all(
             filesArray.map(async (file) => {
-                const result = await cloudinary.v2.uploader.upload((Array.isArray(file)?file[0].tempFilePath:file.tempFilePath), {
-                    folder: 'products',
+                const filePath = Array.isArray(file)
+                    ? file[0].tempFilePath
+                    : file.tempFilePath;
+
+                const result = await cloudinary.v2.uploader.upload(filePath, {
+                    folder: "products",
                     crop: "scale",
-                    resource_type: "image"
+                    resource_type: "image",
                 });
-                removeTemp((Array.isArray(file)?file[0].tempFilePath:file.tempFilePath))
+
+                removeTemp(filePath);
+
                 return {
                     public_id: result.public_id,
-                    url: result.secure_url
-                }
+                    url: result.secure_url,
+                };
             })
-        ); 
+        );
 
-        // Save product data to MongoDB
-        const newProduct = {
+        const product = await ProductModel.create({
             user: _id,
             name,
             category,
-            subCategory,
+            subCategory, // ✅ ALWAYS ARRAY
             price,
             description,
             stock,
             images: imageUrls,
-        };
-        const product = await ProductModel.create(newProduct);
+        });
 
         return res.status(201).json({
             success: true,
-            product
-        })
-
+            product,
+        });
     } catch (error) {
-        return next(error)
+        return next(error);
     }
-}
+};
 
 export const createManyProducts = async (req, res, next) => {
     try { 

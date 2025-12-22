@@ -1,5 +1,6 @@
 import crypto from "crypto";
 import OrderModel from "../models/order.js";
+import UserModel from "../models/user.js"
 import dotenv from "dotenv";
 
 dotenv.config({ path: "config/config.env" });
@@ -50,6 +51,13 @@ export const paystackWebhook = async (req, res, next) => {
                     status: "paid",
                 },
             });
+
+            // 2️⃣ CLEAR USER CART AFTER SUCCESSFUL ORDER
+            await UserModel.findByIdAndUpdate(
+                userId,
+                { $set: { cartItems: [] } },
+                { new: true }
+            );
 
             return res.sendStatus(200);
         } catch (err) {

@@ -23,6 +23,34 @@ const UserSchema = new Schema({
         minlength: [6, 'Your password must be longer than 6 characters'],
         select: false
     },
+    shippingAddress: {
+        fullName: {
+            type: String,
+            trim: true
+        },
+        email: {
+            type: String,
+            validate: [validator.isEmail, 'Please enter valid email address']
+        },
+        country: {
+            type: String
+        },
+        city: {
+            type: String
+        },
+        street: {
+            type: String
+        },
+        phone: {
+            type: String
+        },
+        company: {
+            type: String
+        },
+        state: {
+            type: String
+        }
+    },
     cartItems: [
         {
             product: {
@@ -42,7 +70,7 @@ const UserSchema = new Schema({
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Product',
                 required: true
-            }, 
+            },
         },
     ],
     role: {
