@@ -4,7 +4,7 @@ import ErrorHandler from "../utils/errorHandler.js";
 import APIFeatures from "../utils/apiFeatures.js";
 import products from "../data/products.json"
 import cloudinary from "cloudinary"
-import {removeTemp} from "../utils/helpers.js"
+import { removeTemp } from "../utils/helpers.js"
 
 //To create a new products 
 export const createProduct = async (req, res, next) => {
@@ -78,9 +78,94 @@ export const createProduct = async (req, res, next) => {
     }
 };
 
+export const updateProduct = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+
+        let product = await ProductModel.findById(id);
+
+        if (!product) {
+            return next(new ErrorHandler("Product not found", 404));
+        }
+
+        let { subCategory } = req.body;
+
+        // ✅ Normalize subCategory → ALWAYS ARRAY
+        if (subCategory !== undefined) {
+            if (Array.isArray(subCategory)) {
+                subCategory = subCategory.map(sc => sc.trim());
+            } else if (typeof subCategory === "string") {
+                subCategory = subCategory
+                    .split(",")
+                    .map(sc => sc.trim());
+            } else {
+                subCategory = [];
+            }
+
+            req.body.subCategory = subCategory;
+        }
+
+        /**
+         * ✅ If new images are uploaded:
+         * 1. Delete old images from Cloudinary
+         * 2. Upload new ones
+         */
+        if (req.files && Object.keys(req.files).length > 0) {
+            // Delete old images
+            for (const image of product.images) {
+                await cloudinary.v2.uploader.destroy(image.public_id);
+            }
+
+            const filesArray = Object.values(req.files);
+
+            const imageUrls = await Promise.all(
+                filesArray.map(async (file) => {
+                    const filePath = Array.isArray(file)
+                        ? file[0].tempFilePath
+                        : file.tempFilePath;
+
+                    const result = await cloudinary.v2.uploader.upload(filePath, {
+                        folder: "products",
+                        crop: "scale",
+                        resource_type: "image",
+                    });
+
+                    removeTemp(filePath);
+
+                    return {
+                        public_id: result.public_id,
+                        url: result.secure_url,
+                    };
+                })
+            );
+
+            req.body.images = imageUrls;
+        }
+
+        // ✅ Update product
+        product = await ProductModel.findByIdAndUpdate(
+            id,
+            req.body,
+            {
+                new: true,
+                runValidators: true,
+            }
+        );
+
+        return res.status(200).json({
+            success: true,
+            product,
+        });
+    } catch (error) {
+        return next(error);
+    }
+};
+
+
+
 export const createManyProducts = async (req, res, next) => {
-    try { 
-        
+    try {
+
 
         const newP = products.map(val => {
             return {
@@ -178,30 +263,30 @@ export const getOneProduct = async (req, res, next) => {
 }
 
 //To update the product
-export const updateProduct = async (req, res, next) => {
-    const { productId } = req.params;
-    try {
+// export const updateProduct = async (req, res, next) => {
+//     const { productId } = req.params;
+//     try {
 
-        let product = await ProductModel.findById(productId);
+//         let product = await ProductModel.findById(productId);
 
-        if (!product) {
-            return res.status(404).json({
-                success: false,
-                message: "Product not found"
-            })
-        }
+//         if (!product) {
+//             return res.status(404).json({
+//                 success: false,
+//                 message: "Product not found"
+//             })
+//         }
 
-        product = await ProductModel.findByIdAndUpdate(productId, req.body, { new: true, runValidator: true, useFindAndModify: false })
+//         product = await ProductModel.findByIdAndUpdate(productId, req.body, { new: true, runValidator: true, useFindAndModify: false })
 
-        return res.status(200).json({
-            success: true,
-            product
-        })
+//         return res.status(200).json({
+//             success: true,
+//             product
+//         })
 
-    } catch (error) {
-        return next(error)
-    }
-}
+//     } catch (error) {
+//         return next(error)
+//     }
+// }
 
 //To delete product
 export const deleteProduct = async (req, res, next) => {
@@ -214,7 +299,7 @@ export const deleteProduct = async (req, res, next) => {
             return next(new ErrorHandler('Product not found.', 404))
         }
 
-        await ProductModel.deleteOne({_id:productId});
+        await ProductModel.deleteOne({ _id: productId });
 
         return res.status(200).json({
             success: true,
