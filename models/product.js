@@ -63,6 +63,10 @@ const ProductSchema = new Schema({
             trim: true
         }
     ], 
+    sold: {
+        type: Number,
+        default: 0
+    },
     stock: {
         type: Number,
         required: [true, "Please enter product stock"],

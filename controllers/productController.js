@@ -289,29 +289,39 @@ export const getOneProduct = async (req, res, next) => {
 //     }
 // }
 
-//To delete product
+// To delete product
 export const deleteProduct = async (req, res, next) => {
-    const { productId } = req.params;
     try {
+        const { productId } = req.params;
 
-        let product = await ProductModel.findById(productId);
+        const product = await ProductModel.findById(productId);
 
         if (!product) {
-            return next(new ErrorHandler('Product not found.', 404))
+            return next(new ErrorHandler("Product not found.", 404));
         }
 
+        // ✅ Delete images from Cloudinary
+        if (product.images && product.images.length > 0) {
+            for (const image of product.images) {
+                if (image.public_id) {
+                    await cloudinary.v2.uploader.destroy(image.public_id);
+                }
+            }
+        }
+
+        // ✅ Delete product from DB
         await ProductModel.deleteOne({ _id: productId });
 
         return res.status(200).json({
             success: true,
-            message: "Product has been deleted"
-        })
+            message: "Product deleted successfully",
+        });
 
     } catch (error) {
-        console.log(error);
-        return next(error)
+        return next(error);
     }
-}
+};
+
 
 // Create new review   =>   /api/v1/review
 export const createProductReview = async (req, res, next) => {
