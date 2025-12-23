@@ -22,7 +22,11 @@ connectDb();
 
 const PORT = process.env.PORT || 8000; 
 
- 
+ cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 const server = app.listen(PORT, () => {
     console.log(`Treasurebox server connected on Port: http://localhost:${PORT} in ${process.env.NODE_ENV} MODE`);
