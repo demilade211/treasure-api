@@ -9,7 +9,7 @@ import { removeTemp } from "../utils/helpers.js"
 //To create a new products 
 export const createProduct = async (req, res, next) => {
     try {
-        const { name, category, price, stock, description } = req.body;
+        const { name, category, price, stock, description, previousPrice } = req.body;
         let { subCategory } = req.body;
         const { _id } = req.user;
 
@@ -62,11 +62,12 @@ export const createProduct = async (req, res, next) => {
             user: _id,
             name,
             category,
-            subCategory, // ✅ ALWAYS ARRAY
+            subcategory: subCategory, // ✅ ALWAYS ARRAY
             price,
             description,
             stock,
             images: imageUrls,
+            previousPrice
         });
 
         return res.status(201).json({
