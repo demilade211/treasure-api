@@ -145,7 +145,7 @@ export const updateProduct = async (req, res, next) => {
 
         // ✅ Update product
         product = await ProductModel.findByIdAndUpdate(
-            id,
+            productId,
             req.body,
             {
                 new: true,
