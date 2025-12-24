@@ -13,8 +13,7 @@ export const getAllOrders = async (req, res, next) => {
                 .populate("user", "name email")
                 .sort({ createdAt: -1 }),
             req.query
-        )
-            .search()
+        ) 
             .filter()
             .pagination(resultsPerPage);
 
