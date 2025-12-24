@@ -41,7 +41,6 @@ class APIFeatures {
         });
 
         return this;
-        return this;
     }
 
     filter() {
