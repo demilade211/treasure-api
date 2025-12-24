@@ -144,7 +144,7 @@ export const getOrderById = async (req, res, next) => {
 
         // Populate related fields like user and order items
         const order = await OrderModel.findById(id)
-            .populate("user", "name email phone") // get customer info
+            .populate("user", "name email phone category") // get customer info
             .populate("orderItems.product", "name image price"); // get product details
 
         if (!order) {
