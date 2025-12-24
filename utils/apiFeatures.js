@@ -56,7 +56,7 @@ class APIFeatures {
 
         // Handle subcategory (array field)
         if (queryCopy.subCategory) {
-            finalQuery.subCategory = { $in: [queryCopy.subCategory] };
+            finalQuery.subcategory = { $in: [queryCopy.subCategory] };
             delete queryCopy.subCategory;
         }
 
@@ -79,6 +79,8 @@ class APIFeatures {
         this.query = this.query.find(finalQuery);
         return this;
     }
+
+    
 
     pagination(resultsPerPage) {
         const currentPage = Number(this.queryStr.page) || 1;
