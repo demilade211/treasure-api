@@ -78,3 +78,57 @@ export const getRecentOrders = async (req, res, next) => {
         next(error);
     }
 };
+
+// GET /api/v1/admin/orders/summary
+export const getOrderSummary = async (req, res, next) => {
+    try {
+        const totalOrders = await OrderModel.countDocuments();
+
+        const deliveredOrders = await OrderModel.countDocuments({
+            orderStatus: "delivered"
+        });
+
+        const processingOrders = await OrderModel.countDocuments({
+            orderStatus: "processing"
+        });
+
+        res.status(200).json({
+            success: true,
+            summary: {
+                totalOrders,
+                deliveredOrders,
+                processingOrders
+            }
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+// PUT /api/v1/admin/orders/:id/status
+export const updateOrderStatus = async (req, res, next) => {
+    try {
+        const { status } = req.body;
+
+        if (!status) {
+            return next(new ErrorHandler("Order status is required", 400));
+        }
+
+        const order = await OrderModel.findById(req.params.id);
+
+        if (!order) {
+            return next(new ErrorHandler("Order not found", 404));
+        }
+
+        order.orderStatus = status;
+        await order.save();
+
+        res.status(200).json({
+            success: true,
+            message: "Order status updated successfully",
+            order
+        });
+    } catch (error) {
+        next(error);
+    }
+};
