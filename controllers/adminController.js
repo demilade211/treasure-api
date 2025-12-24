@@ -132,3 +132,30 @@ export const updateOrderStatus = async (req, res, next) => {
         next(error);
     }
 };
+
+
+export const getOrderById = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+
+        if (!id) {
+            return next(new ErrorHandler("Order ID is required", 400));
+        }
+
+        // Populate related fields like user and order items
+        const order = await OrderModel.findById(id)
+            .populate("user", "name email phone") // get customer info
+            .populate("orderItems.product", "name image price"); // get product details
+
+        if (!order) {
+            return next(new ErrorHandler("Order not found", 404));
+        }
+
+        res.status(200).json({
+            success: true,
+            order,
+        });
+    } catch (err) {
+        next(err);
+    }
+};
