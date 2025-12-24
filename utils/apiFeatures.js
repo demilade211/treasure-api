@@ -21,7 +21,7 @@ class APIFeatures {
         //     : {};
 
         // this.query = this.query.find({ ...keyword });
-        const keyword = this.queryStr.keyword.trim();
+        const keyword = this.queryStr.keyword ? this.queryStr.keyword.trim() : '';
         const slugKeyword = toSlug(keyword);
 
         this.query = this.query.find({
