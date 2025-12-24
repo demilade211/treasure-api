@@ -12,7 +12,7 @@ const sendEmail = async (options) => {
 
   const client = new MailtrapClient({ endpoint: ENDPOINT, token: process.env.MAILTRAP_TOKEN });
 
-  const sender = {   email: "noreply@gamrslog.online" };
+  const sender = {   email: "noreply@tuale.online" };
 
   await client.send({
     from: sender,
