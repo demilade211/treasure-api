@@ -1,3 +1,12 @@
+const toSlug = (text = "") =>
+    text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-");
+
 class APIFeatures {
     constructor(query, queryStr) {//query is e.g productModel.find() queryStr is the string we want to find
         this.query = query;
@@ -5,15 +14,35 @@ class APIFeatures {
     }
 
     search() {
-        const keyword = this.queryStr.keyword ?//also req.query.keyword
-            {
-                name: { $regex: this.queryStr.keyword, $options: "i" }//i means it shouldnt be case sensitive
-            }
-            : {};
+        // const keyword = this.queryStr.keyword ?//also req.query.keyword
+        //     {
+        //         name: { $regex: this.queryStr.keyword, $options: "i" }//i means it shouldnt be case sensitive
+        //     }
+        //     : {};
 
-        this.query = this.query.find({ ...keyword });
+        // this.query = this.query.find({ ...keyword });
+        const keyword = this.queryStr.keyword.trim();
+        const slugKeyword = toSlug(keyword);
+
+        this.query = this.query.find({
+            $or: [
+                // product name (normal text)
+                { name: { $regex: keyword, $options: "i" } },
+
+                // product slug
+                { slug: { $regex: slugKeyword, $options: "i" } },
+
+                // category slug
+                { category: { $regex: slugKeyword, $options: "i" } },
+
+                // subCategory stored as array of slugs
+                { subCategory: { $in: [slugKeyword] } },
+            ],
+        });
+
         return this;
-    } 
+        return this;
+    }
 
     filter() {
         const queryCopy = { ...this.queryStr }/*
@@ -28,7 +57,7 @@ class APIFeatures {
 
         // Handle subcategory (array field)
         if (queryCopy.subCategory) {
-            finalQuery.subcategory = { $in: [queryCopy.subCategory] };
+            finalQuery.subCategory = { $in: [queryCopy.subCategory] };
             delete queryCopy.subCategory;
         }
 
