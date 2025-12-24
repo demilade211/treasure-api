@@ -9,8 +9,8 @@ import payment from "./routes/payment.js"
 import webhook from "./routes/webhook.js"
 import order from "./routes/order.js"
 import admin from "./routes/admin.js"
-import user from "./routes/user.js"
-
+import user from "./routes/user.js" 
+import contact from "./routes/contanct.js"
 
 
 
@@ -26,12 +26,13 @@ app.use(fileUpload({
 }));
 
 app.use('/api/v1',auth);   
-app.use('/api/v1',products); 
+app.use('/api/v1',products);  
 app.use('/api/v1/payment',payment); 
 app.use('/api/v1/webhook',webhook);
 app.use('/api/v1/order',order);
 app.use('/api/v1/admin',admin);
 app.use('/api/v1/user',user);
+app.use('/api/v1',contact);
 
 
 
