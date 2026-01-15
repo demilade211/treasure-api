@@ -107,9 +107,9 @@ export const verifyOtp = async (req, res, next) => {
 export const registerUser = async (req, res, next) => {
 
     try {
-        const { name, email, password, confirmPassword } = req.body
+        const { email, password, confirmPassword } = req.body
 
-        if (!name || !email || !password || !confirmPassword) return next(new ErrorHandler("All fields required", 400))
+        if (!email || !password || !confirmPassword) return next(new ErrorHandler("All fields required", 400))
 
         if (password !== confirmPassword) return next(new ErrorHandler("Passwords do not match", 200))
 
