@@ -53,6 +53,9 @@ const ProductSchema = new Schema({
                 "events",
                 "gifts",
                 "flowers",
+                "giftshop",
+                "seasonal",
+                "romance",
             ],
             message: "Please select correct category for product"
         }
