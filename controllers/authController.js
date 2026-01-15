@@ -59,7 +59,7 @@ export const sendOtpToEmail = async (req, res, next) => {
 
             await user.save({ validateBeforeSave: false });
 
-            await handleEmail(user,next,message)
+            return await handleEmail(user,next,message)
 
         }
 
