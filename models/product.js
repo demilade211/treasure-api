@@ -60,6 +60,10 @@ const ProductSchema = new Schema({
             message: "Please select correct category for product"
         }
     },
+    mainSubcategory: {
+        type: String, 
+        default: ""
+    },
     subcategory: [
         {
             type: String,
