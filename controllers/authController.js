@@ -59,7 +59,7 @@ export const sendOtpToEmail = async (req, res, next) => {
 
             await user.save({ validateBeforeSave: false });
 
-            return await handleEmail(user,next,message)
+            return await handleEmail(user,next,message,res)
 
         }
 
@@ -70,7 +70,7 @@ export const sendOtpToEmail = async (req, res, next) => {
             expiretoken: expiryDate
         });
 
-        return await handleEmail(savedUser,next,message)
+        return await handleEmail(savedUser,next,message,res)
 
 
     } catch (error) {
