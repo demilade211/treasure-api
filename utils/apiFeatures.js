@@ -36,7 +36,7 @@ class APIFeatures {
                 { category: { $regex: slugKeyword, $options: "i" } },
 
                 // subCategory stored as array of slugs
-                { subCategory: { $in: [slugKeyword] } },
+                { subcategory: { $in: [slugKeyword] } },
             ],
         });
 

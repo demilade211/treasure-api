@@ -9,34 +9,37 @@ import { removeTemp } from "../utils/helpers.js"
 //To create a new products 
 export const createProduct = async (req, res, next) => {
     try {
-        const { name, category, price, stock, description, previousPrice } = req.body;
+        const {
+            name,
+            category,
+            price,
+            stock,
+            description,
+            previousPrice,
+            mainSubcategory,
+            isBestSeller = false
+        } = req.body;
+
         let { subCategory } = req.body;
         const { _id } = req.user;
-
-        req.body.user = _id;
 
         // Normalize subCategory → ALWAYS ARRAY
         if (subCategory) {
             if (Array.isArray(subCategory)) {
                 subCategory = subCategory.map(sc => sc.trim());
-            } else if (typeof subCategory === "string") {
-                // supports "birthday,anniversary"
-                subCategory = subCategory
-                    .split(",")
-                    .map(sc => sc.trim());
+            } else {
+                subCategory = subCategory.split(",").map(sc => sc.trim());
             }
         } else {
             subCategory = [];
         }
 
-        // Validate images
         if (!req.files || Object.keys(req.files).length === 0) {
             return next(new ErrorHandler("No files were uploaded.", 400));
         }
 
         const filesArray = Object.values(req.files);
 
-        // Upload images to Cloudinary
         const imageUrls = await Promise.all(
             filesArray.map(async (file) => {
                 const filePath = Array.isArray(file)
@@ -45,7 +48,6 @@ export const createProduct = async (req, res, next) => {
 
                 const result = await cloudinary.v2.uploader.upload(filePath, {
                     folder: "products",
-                    crop: "scale",
                     resource_type: "image",
                 });
 
@@ -62,22 +64,22 @@ export const createProduct = async (req, res, next) => {
             user: _id,
             name,
             category,
-            subcategory: subCategory, // ✅ ALWAYS ARRAY
+            mainSubcategory,
+            subcategory: subCategory,
             price,
+            previousPrice,
             description,
             stock,
-            images: imageUrls,
-            previousPrice
+            isBestSeller,
+            images: imageUrls
         });
 
-        return res.status(201).json({
-            success: true,
-            product,
-        });
+        res.status(201).json({ success: true, product });
     } catch (error) {
-        return next(error);
+        next(error);
     }
 };
+
 
 export const updateProduct = async (req, res, next) => {
     try {
@@ -159,6 +161,44 @@ export const updateProduct = async (req, res, next) => {
         });
     } catch (error) {
         return next(error);
+    }
+};
+
+export const toggleBestSeller = async (req, res, next) => {
+    try {
+        const { productId } = req.params;
+
+        const product = await ProductModel.findById(productId);
+        if (!product) {
+            return next(new ErrorHandler("Product not found", 404));
+        }
+
+        product.isBestSeller = !product.isBestSeller;
+        await product.save();
+
+        res.status(200).json({
+            success: true,
+            isBestSeller: product.isBestSeller,
+            message: `Product ${product.isBestSeller ? "marked as" : "removed from"} best seller`
+        });
+
+    } catch (error) {
+        next(error);
+    }
+};
+export const getBestSellers = async (req, res, next) => {
+    try {
+        const bestSellers = await ProductModel.find({ isBestSeller: true })
+            .sort({ createdAt: -1 })
+            .limit(10); // optional limit
+
+        res.status(200).json({
+            success: true,
+            count: bestSellers.length,
+            products: bestSellers
+        });
+    } catch (error) {
+        next(error);
     }
 };
 

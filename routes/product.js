@@ -1,5 +1,5 @@
 import express from "express";
-import { getProducts, addToCart,updateCartQuantity, addToWishlist, removeFromWishlist, removeFromCart, searchProducts, createProduct, createManyProducts, getOneProduct, updateProduct, deleteProduct, createProductReview, getProductReviews, deleteReview } from "../controllers/productController.js";
+import { getProducts, addToCart,updateCartQuantity, addToWishlist, removeFromWishlist,toggleBestSeller,getBestSellers, removeFromCart, searchProducts, createProduct, createManyProducts, getOneProduct, updateProduct, deleteProduct, createProductReview, getProductReviews, deleteReview } from "../controllers/productController.js";
 import { allowedRoles, authenticateUser } from "../middlewares/authMiddleware.js";
 const router = express.Router()
 
@@ -13,6 +13,8 @@ router.route('/products/wishList/:productId').post(authenticateUser, addToWishli
     .delete(authenticateUser, removeFromWishlist);
 router.route('/admin/product/create').post(authenticateUser, allowedRoles("admin"), createProduct);
 router.route('/admin/product/createMany').post(authenticateUser, allowedRoles("admin"), createManyProducts);
+router.route('/admin/product/:productId/best-seller').put(authenticateUser, allowedRoles("admin"), toggleBestSeller);
+router.route('/admin/products/best-sellers').get(authenticateUser, allowedRoles("admin"), toggleBestSeller);
 router.route('/admin/product/:productId')
     .put(authenticateUser, allowedRoles("admin"), updateProduct)
     .delete(authenticateUser, allowedRoles("admin"), deleteProduct);

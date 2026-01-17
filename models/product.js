@@ -31,6 +31,10 @@ const ProductSchema = new Schema({
         required: [true, "Please enter product description"],
 
     },
+    isBestSeller: {
+        type: Boolean,
+        default: false // ✅ BEST SELLER DEFAULT
+    },
     ratings: {
         type: Number,
         default: 0
