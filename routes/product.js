@@ -14,7 +14,7 @@ router.route('/products/wishList/:productId').post(authenticateUser, addToWishli
 router.route('/admin/product/create').post(authenticateUser, allowedRoles("admin"), createProduct);
 router.route('/admin/product/createMany').post(authenticateUser, allowedRoles("admin"), createManyProducts);
 router.route('/admin/product/:productId/best-seller').put(authenticateUser, allowedRoles("admin"), toggleBestSeller);
-router.route('/admin/products/best-sellers').get(authenticateUser, allowedRoles("admin"), toggleBestSeller);
+router.route('/products/best-sellers').get(getBestSellers);
 router.route('/admin/product/:productId')
     .put(authenticateUser, allowedRoles("admin"), updateProduct)
     .delete(authenticateUser, allowedRoles("admin"), deleteProduct);
