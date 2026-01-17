@@ -216,7 +216,7 @@ export const getProducts = async (req, res, next) => {
 
     try {
         const productsCount = await ProductModel.countDocuments()
-        const apiFeatures = new APIFeatures(ProductModel.find().sort({ createdAt: -1 }), req.query).search().filter()
+        const apiFeatures = new APIFeatures(ProductModel.find().sort({ createdAt: -1, _id: -1 }), req.query).search().filter()
 
         let products = await apiFeatures.query;//get the result after implementing the functions
         let filteredProductCount = products.length;
