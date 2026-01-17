@@ -219,7 +219,7 @@ export const forgotPassword = async (req, res, next) => {
         try {
             await sendEmail({
                 email: user.email,
-                subject: "GamrsLog Password Recovery",
+                subject: "Treasurebox Recovery",
                 message,
                 html: message
             })
