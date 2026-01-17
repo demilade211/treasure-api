@@ -87,7 +87,7 @@ export const initializeOrderPayment = async (req, res, next) => {
                 deliveryPrice,
                 totalPrice,
             },
-            callback_url: `https://treasure-box-hazel.vercel.app/profile`
+            callback_url: `https://www.treasurebox.ng/profile`
         };
 
         const response = await axios.post(
