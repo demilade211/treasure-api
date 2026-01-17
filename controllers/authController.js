@@ -59,7 +59,7 @@ export const sendOtpToEmail = async (req, res, next) => {
 
             await user.save({ validateBeforeSave: false });
 
-            return await handleEmail(user,next,message,res)
+            return await handleEmail(user, next, message, res)
 
         }
 
@@ -70,7 +70,7 @@ export const sendOtpToEmail = async (req, res, next) => {
             expiretoken: expiryDate
         });
 
-        return await handleEmail(savedUser,next,message,res)
+        return await handleEmail(savedUser, next, message, res)
 
 
     } catch (error) {
@@ -122,10 +122,10 @@ export const registerUser = async (req, res, next) => {
 
 
         const savedUser = await UserModel.create({
-            email: email.toLowerCase(), 
+            email: email.toLowerCase(),
             password,
-            cartItems:[],
-            wishItems:[],
+            cartItems: [],
+            wishItems: [],
         });
 
 
@@ -159,7 +159,7 @@ export const loginUser = async (req, res, next) => {
         const user = await UserModel.findOne({ email: email.toLowerCase() }).select("+password")
 
 
-        if (!user) return next(new ErrorHandler("Invalid Credentials", 200)) 
+        if (!user) return next(new ErrorHandler("Invalid Credentials", 200))
 
         const isMatch = await bcrypt.compare(password, user.password);
 
@@ -209,17 +209,22 @@ export const forgotPassword = async (req, res, next) => {
         await user.save({ validateBeforeSave: false });
 
 
-        const message = `Your password reset token is as follows:\n\n${resetToken}\n\nif you have not 
-        requested this email, then ignore it.`
+        const resetUrl = `https://www.treasurebox.ng/auth/reset/${resetToken}`;
+        const message = `
+            <p>Please click on the link below to reset your password:</p>
+            <a href="${resetUrl}">Reset Link</a>
+            <p>If you did not request this email, please ignore it.</p>
+        `;
 
         try {
             await sendEmail({
                 email: user.email,
-                subject: "Tuale Password Recovery",
-                message
+                subject: "GamrsLog Password Recovery",
+                message,
+                html: message
             })
 
-            res.status(200).json({
+            return res.status(200).json({
                 success: true,
                 message: `Email sent to ${user.email}`
             })
@@ -305,19 +310,19 @@ export const resetPassword = async (req, res, next) => {
     }
 }
 
-export const getLoggedInUser = async(req,res,next)=>{
-    const {_id} = req.user;
+export const getLoggedInUser = async (req, res, next) => {
+    const { _id } = req.user;
 
-    try {  
+    try {
         const user = await UserModel.findById(_id)
-        .populate("cartItems.product") 
-        .populate("wishItems.product")  
+            .populate("cartItems.product")
+            .populate("wishItems.product")
 
 
         return res.status(200).json({
             success: true,
-            user, 
-            
+            user,
+
         })
 
     } catch (error) {
