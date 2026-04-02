@@ -251,7 +251,7 @@ export const searchProducts = async (req, res, next) => {
 
 //To get all products => api/products?keyword=apple
 export const getProducts = async (req, res, next) => {
-    const resultsPerPage = 10;
+    const resultsPerPage = parseInt(req.query.limit) || 10;
 
 
     try {
