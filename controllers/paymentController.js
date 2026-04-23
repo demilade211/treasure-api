@@ -87,7 +87,7 @@ export const initializeOrderPayment = async (req, res, next) => {
                 deliveryPrice,
                 totalPrice,
             },
-            callback_url: `https://www.treasurebox.ng/profile`
+            callback_url: `https://www.treasurebox.ng/profile?tab=7`
         };
 
         const response = await axios.post(
